@@ -1,0 +1,23 @@
+#!/bin/bash
+
+#Define report location
+read -p "what directory location do you want to save the report: " location
+
+#Welcome message for the script
+echo "Welcome to the Directory Usage Report Utility v1.0" > $location/report.txt
+echo "Created by Chinalee Johnson" >> $location/report.txt
+sleep 1
+
+#Add the report generation date and time
+date >> $location/report.txt
+sleep 1
+
+#Ask the user for the directory to generate the report on
+read -p "Please enter the directory where you want to run the report: " report
+
+#Populate the remainder of the report
+ls -l $report >> $location/report.txt
+du -sh $report >> $location/report.txt
+sleep 1
+
+echo "Done!" >> $location/report.txt

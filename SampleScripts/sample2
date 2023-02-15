@@ -1,0 +1,8 @@
+#!/bin/bash
+
+#defining a variable
+name="chinalee Johnson"
+
+#call our variable in an echo statement
+echo "Hi, my name $name!"
+
